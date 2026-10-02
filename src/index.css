@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─── */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Palette — warm dark foundation with muted rose accent */
+  --color-surface-0: oklch(0.11 0.005 285);     /* deepest bg */
+  --color-surface-1: oklch(0.14 0.005 285);     /* slightly raised */
+  --color-surface-2: oklch(0.18 0.005 285);     /* hover / active */
+  --color-surface-3: oklch(0.22 0.008 285);     /* borders / dividers */
+
+  --color-text-primary: oklch(0.93 0.01 80);    /* warm off-white */
+  --color-text-secondary: oklch(0.62 0.01 80);  /* muted */
+  --color-text-tertiary: oklch(0.45 0.008 80);  /* very subtle */
+
+  --color-accent: oklch(0.65 0.12 10);          /* muted rose */
+  --color-accent-subtle: oklch(0.65 0.12 10 / 0.12);
+  --color-accent-hover: oklch(0.72 0.13 10);
+
+  --color-danger: oklch(0.65 0.15 25);
+}
+
+/* ─── Base ─── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface-3) transparent;
+  }
+
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-surface-0);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow: hidden;
+  }
+
+  #root {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Dynamic viewport height for mobile keyboards */
+  @supports (height: 100dvh) {
+    #root {
+      height: 100dvh;
+    }
+  }
+}
+
+/* ─── Chat message typography ─── */
+@layer components {
+  /* Scenario / Narration: actions, scene setting (soft blush pink italic - matching screenshot) */
+  .msg-narration {
+    font-style: italic;
+    color: #f9c4de;
+    line-height: 1.7;
+  }
+
+  /* Dialogue: spoken words (crisp white, high-contrast) */
+  .msg-dialogue {
+    color: #f9fafb;
+    line-height: 1.7;
+  }
+
+  /* Thoughts / Reactions: bodily sensations, inner feelings (warm golden amber italic) */
+  .msg-thought {
+    font-style: italic;
+    color: #fcd34d;
+    line-height: 1.7;
+  }
+
+  /* Typing cursor for streaming */
+  .streaming-cursor::after {
+    content: "▍";
+    animation: blink 1s steps(2) infinite;
+    color: var(--color-accent);
+    margin-left: 1px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ─── Glassmorphism message card ─── */
+  .msg-card {
+    background: oklch(0.14 0.008 285 / 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid oklch(1 0 0 / 0.06);
+    box-shadow:
+      0 0 0 1px oklch(1 0 0 / 0.02),
+      0 2px 8px oklch(0 0 0 / 0.3),
+      inset 0 1px 0 oklch(1 0 0 / 0.04);
+  }
+
+  /* ─── Avatar glow ─── */
+  .avatar-glow {
+    box-shadow:
+      0 0 12px 2px oklch(0.65 0.12 10 / 0.25),
+      0 0 24px 4px oklch(0.65 0.12 10 / 0.1);
+  }
+
+  /* ─── Emotion badge ─── */
+  .emotion-badge {
+    background: oklch(0.18 0.01 285 / 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+
+  /* ─── Word fade-in for streaming ─── */
+  .word-fade-in {
+    animation: wordAppear 0.3s ease-out both;
+  }
+
+  @keyframes wordAppear {
+    from {
+      opacity: 0;
+      filter: blur(2px);
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

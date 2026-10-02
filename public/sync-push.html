@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sync Push</title></head>
+<body>
+<h2>Pushing localStorage to server...</h2>
+<pre id="log"></pre>
+<script>
+const log = document.getElementById('log')
+function addLog(msg) { log.textContent += msg + '\n' }
+
+async function pushAll() {
+  const entries = {}
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    if (key && key.startsWith('velvet-')) {
+      try {
+        entries[key] = JSON.parse(localStorage.getItem(key))
+        addLog(`Found: ${key} (${localStorage.getItem(key).length} bytes)`)
+      } catch {
+        entries[key] = localStorage.getItem(key)
+      }
+    }
+  }
+
+  addLog(`\nPushing ${Object.keys(entries).length} keys to server...`)
+
+  // Push each key individually  
+  for (const [key, value] of Object.entries(entries)) {
+    try {
+      const res = await fetch(`/api/storage/${encodeURIComponent(key)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(value),
+      })
+      const result = await res.json()
+      addLog(`  ✅ ${key}: ${JSON.stringify(result)}`)
+    } catch (err) {
+      addLog(`  ❌ ${key}: ${err.message}`)
+    }
+  }
+
+  addLog('\nDone! Now refresh your phone.')
+}
+
+pushAll()
+</script>
+</body>
+</html>

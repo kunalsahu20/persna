@@ -1,0 +1,126 @@
+Persna Source-Available License
+Version 1.0
+Copyright (c) 2026 Kunal Sahu. All rights reserved.
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+
+"Software" means the source code, documentation, and associated files in
+this repository, including any modifications or derivative works.
+
+"You" means the individual or legal entity exercising rights under this
+License.
+
+"Commercial Use" means any use of the Software, in whole or in part, that
+is intended for or directed toward commercial advantage or monetary
+compensation. This includes, without limitation: selling the Software or
+access to it; offering it as a hosted, subscription, or pay-per-use
+service; bundling it into a product or service that you charge for;
+using it to provide paid services to third parties; or using it in the
+operation of a business that generates revenue.
+
+2. GRANT OF RIGHTS
+
+Subject to the conditions below, you are granted a worldwide,
+royalty-free, non-exclusive, non-transferable license to:
+
+  (a) use, reproduce, and modify the Software;
+  (b) create derivative works based upon the Software;
+  (c) distribute copies of the Software and your derivative works,
+      in source or object form;
+  (d) use the Software for personal, educational, research, and other
+      non-commercial purposes.
+
+3. CONDITIONS
+
+The rights granted in Section 2 are expressly conditioned on the following:
+
+  (a) ATTRIBUTION. Any distribution of the Software or a derivative work
+      must retain this License file, the copyright notice above, and
+      attribution to the original project.
+
+  (b) SHARE-ALIKE FOR NON-COMMERCIAL USE. If you distribute a derivative
+      work, it must be released under this same License. You may not
+      relicense the Software or any derivative work under different terms.
+
+  (c) NO COMMERCIAL USE WITHOUT PERMISSION. Commercial Use is expressly
+      prohibited without prior written permission from the copyright
+      holder. To request permission, contact the copyright holder through
+      the contact information in this repository.
+
+  (d) NO TRADEMARK RIGHTS. This License does not grant any rights to use
+      the name "Persna", its logo, or any other trade names, trademarks, or
+      service marks of the copyright holder.
+
+  (e) AGE RESTRICTION. The Software is intended exclusively for use by
+      adults aged 18 years or older. You must be at least 18 years old to
+      use, copy, modify, or distribute the Software.
+
+4. PROHIBITED USES
+
+Regardless of Section 2, you may not use the Software:
+
+  (a) to create, generate, distribute, or facilitate any content that
+      sexualises minors, or that depicts minors in a sexual or romantic
+      context, through any framing including fictional, animated, or
+      "aged-up" scenarios;
+  (b) to depict real, identifiable persons in sexual or intimate content
+      without their documented consent;
+  (c) to violate any applicable law or regulation in your jurisdiction;
+  (d) to build, train, or improve any machine learning model using
+      outputs of the Software where doing so would violate Section 4(a).
+
+Violation of this section terminates your rights under this License
+immediately and automatically.
+
+5. THIRD-PARTY COMPONENTS
+
+The Software depends on and may reference third-party software, models,
+and services that are governed by their own licenses. Nothing in this
+License grants rights to those components. You are solely responsible for
+complying with the terms of any third-party component you use, including
+any model weights or checkpoints you download or run.
+
+6. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. THE ENTIRE
+RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD
+THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
+SERVICING, REPAIR, OR CORRECTION.
+
+7. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR
+THE USE OR OTHER DEALINGS IN THE SOFTWARE. THIS INCLUDES, WITHOUT
+LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES, AND DAMAGES FOR LOSS OF PROFITS, DATA, OR GOODWILL.
+
+This limitation applies even if the copyright holder has been advised of
+the possibility of such damages.
+
+8. USER-GENERATED CONTENT
+
+The Software is a tool for generating text and media. The copyright holder
+does not review, control, store, or transmit content that users generate
+with it. You are solely responsible for the content you create, store, or
+distribute, and for your compliance with all applicable laws. The
+prohibitions in Section 4 are absolute and take precedence over any other
+provision of this License.
+
+9. TERMINATION
+
+Your rights under this License terminate automatically and immediately if
+you breach any of its terms, including the conditions in Sections 3 and 4.
+Upon termination you must cease all use and distribution of the Software
+and destroy all copies in your possession or control.
+
+10. ACCEPTANCE
+
+By using, copying, modifying, or distributing the Software, you
+acknowledge that you have read, understood, and agree to be bound by the
+terms of this License. If you do not agree, you may not use the Software.
